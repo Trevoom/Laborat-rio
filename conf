@@ -1,0 +1,245 @@
+flowcharting:
+  rules:
+    # ============================================================
+    # REGRA 1: STATUS DOS FIREWALLS (DISPOSITIVOS / ÍCONES)
+    # ============================================================
+    - name: "Status dos Firewalls (Nós)"
+      pattern: "/.*(icmpping|status_firewall).*/" # Alias/Regex da métrica no Zabbix
+      type: "number"
+      metricType: "serie"
+      shapes:
+        # MATRIZES
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-2"   # SKYONE (10.122.67.144)
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-3"   # VP
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-4"   # CMP
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-5"   # SAMAMBAIA NORTE (10.10.0.1) [MATRIZ]
+          colorMode: "fill"
+
+        # FILIAIS
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-1"   # AGUAS LINDAS II
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-6"   # CEILANDIA
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-7"   # EPTG
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-8"   # GARAVELO
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-9"   # AGUAS LINDAS I
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-10"  # GYN CENTRO
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-11"  # PAPILON
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-12"  # RECANTO
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-13"  # RESIDENCIA
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-14"  # SAMAMBAIA SUL
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-15"  # SANTA MARIA
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-16"  # SOBRADINHO
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-17"  # MONTEMAR
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-18"  # OFICINA
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-19"  # GYN T7
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-20"  # LUZIANIA
+          colorMode: "fill"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-21"  # GYN PORTAL
+          colorMode: "fill"
+
+      thresholds:
+        - value: 0
+          color: "rgba(245, 54, 54, 0.9)"    # Vermelho (OFFLINE)
+          level: 2
+        - value: 1
+          color: "rgba(50, 172, 45, 0.9)"    # Verde (ONLINE)
+          level: 0
+      options:
+        blink: true                         # Pisca em vermelho caso o firewall caia
+
+    # ============================================================
+    # REGRA 2: CONEXÕES / TÚNEIS VPN MATRIZ SKYONE
+    # ============================================================
+    - name: "Links VPN - Matriz SKYONE"
+      pattern: "/.*vpn_skyone.*/"            # Regex da métrica de VPN no Zabbix
+      type: "number"
+      shapes:
+        - cellId: "08YMVVofLo5uhtwW3oWJ-4"   # SKYONE X GYN PORTAL
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-7"   # SKYONE X AGUAS LINDAS II
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-8"   # SKYONE X CEILANDIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-9"   # SKYONE X EPTG
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-10"  # SKYONE X GARAVELO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-11"  # SKYONE X GYN CENTRO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-6"   # SKYONE X AGUAS LINDAS I
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-14"  # SKYONE X LUZIANIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-15"  # SKYONE X GYN T7
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-16"  # SKYONE X PAPILON
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-17"  # SKYONE X RECANTO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-18"  # SKYONE X RESIDENCIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-19"  # SKYONE X SAMAMBAIA SUL
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-20"  # SKYONE X SANTA MARIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-21"  # SKYONE X MONTEMAR
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-22"  # SKYONE X SOBRADINHO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-23"  # SKYONE X OFICINA
+          colorMode: "stroke"
+      thresholds:
+        - value: 0
+          color: "rgba(245, 54, 54, 0.9)"    # Vermelho (Túnel VPN Down)
+          level: 2
+        - value: 1
+          color: "rgba(50, 172, 45, 0.9)"    # Verde (Túnel VPN Up)
+          level: 0
+
+    # ============================================================
+    # REGRA 3: CONEXÕES / TÚNEIS VPN MATRIZ VP
+    # ============================================================
+    - name: "Links VPN - Matriz VP"
+      pattern: "/.*vpn_vp.*/"
+      type: "number"
+      shapes:
+        - cellId: "08YMVVofLo5uhtwW3oWJ-35"  # VP X AGUAS LINDAS II
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-36"  # VP X CEILANDIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-37"  # VP X EPTG
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-38"  # VP X GARAVELO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-34"  # VP X AGUAS LINDAS I
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-42"  # VP X GYN CENTRO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-48"  # VP X PAPILON
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-49"  # VP X RECANTO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-50"  # VP X RESIDENCIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-52"  # VP X SAMAMBAIA SUL
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-53"  # VP X SANTA MARIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-55"  # VP X SOBRADINHO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-46"  # VP X MONTEMAR
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-47"  # VP X OFICINA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-44"  # VP X GYN T7
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-45"  # VP X LUZIANIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-43"  # VP X GYN PORTAL
+          colorMode: "stroke"
+      thresholds:
+        - value: 0
+          color: "rgba(245, 54, 54, 0.9)"
+          level: 2
+        - value: 1
+          color: "rgba(50, 172, 45, 0.9)"
+          level: 0
+
+    # ============================================================
+    # REGRA 4: CONEXÕES / TÚNEIS VPN MATRIZ CMP
+    # ============================================================
+    - name: "Links VPN - Matriz CMP"
+      pattern: "/.*vpn_cmp.*/"
+      type: "number"
+      shapes:
+        - cellId: "08YMVVofLo5uhtwW3oWJ-61"  # CMP X AGUAS LINDAS I
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-66"  # CMP X AGUAS LINDAS II
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-67"  # CMP X CEILANDIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-68"  # CMP X EPTG
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-69"  # CMP X GARAVELO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-70"  # CMP X GYN CENTRO
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-77"  # CMP X PAPILON
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-83"  # CMP X SANTA MARIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-85"  # CMP X SOBRADINHO
+          colorMode: "stroke"
+      thresholds:
+        - value: 0
+          color: "rgba(245, 54, 54, 0.9)"
+          level: 2
+        - value: 1
+          color: "rgba(50, 172, 45, 0.9)"
+          level: 0
+
+    # ============================================================
+    # REGRA 5: CONEXÕES / TÚNEIS VPN MATRIZ SAMAMBAIA NORTE
+    # ============================================================
+    - name: "Links VPN - Matriz SAMAMBAIA NORTE"
+      pattern: "/.*vpn_sn.*/"               # Ajuste esta regex se no Zabbix estiver diferente (ex: vpn_samambaia_norte)
+      type: "number"
+      shapes:
+        - cellId: "COLE_O_ID_SN_AGUAS_LINDAS_I"   # SN X AGUAS LINDAS I
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_AGUAS_LINDAS_II"  # SN X AGUAS LINDAS II
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_CEILANDIA"        # SN X CEILANDIA
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_EPTG"             # SN X EPTG
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_GARAVELO"         # SN X GARAVELO
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_GYN_CENTRO"       # SN X GYN CENTRO
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_GYN_PORTAL"       # SN X GYN PORTAL
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_GYN_T7"           # SN X GYN T7
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_LUZIANIA"         # SN X LUZIANIA
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_MONTEMAR"         # SN X MONTEMAR
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_OFICINA"          # SN X OFICINA
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_PAPILON"          # SN X PAPILON
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_RECANTO"          # SN X RECANTO
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_RESIDENCIA"       # SN X RESIDENCIA
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_SAMAMBAIA_SUL"    # SN X SAMAMBAIA SUL
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_SANTA_MARIA"      # SN X SANTA MARIA
+          colorMode: "stroke"
+        - cellId: "COLE_O_ID_SN_SOBRADINHO"       # SN X SOBRADINHO
+          colorMode: "stroke"
+      thresholds:
+        - value: 0
+          color: "rgba(245, 54, 54, 0.9)"
+          level: 2
+        - value: 1
+          color: "rgba(50, 172, 45, 0.9)"
+          level: 0
