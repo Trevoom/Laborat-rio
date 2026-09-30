@@ -4,9 +4,10 @@ flowcharting:
     # REGRA 1: STATUS DOS FIREWALLS (DISPOSITIVOS / ÍCONES)
     # ============================================================
     - name: "Status dos Firewalls (Nós)"
-      pattern: "/.*/" # Alias/Regex da métrica no Zabbix
+      pattern: "/.*/"                        # Ajustado para capturar qualquer alias direto vindo do setAlias()
       type: "number"
       metricType: "serie"
+      valueName: "last"                      # Avalia o último valor recebido da série
       shapes:
         # MATRIZES
         - cellId: "nzdVLG6IPYVujrJucx6a-2"   # SKYONE (10.122.67.144)
@@ -68,8 +69,9 @@ flowcharting:
     # REGRA 2: CONEXÕES / TÚNEIS VPN MATRIZ SKYONE
     # ============================================================
     - name: "Links VPN - Matriz SKYONE"
-      pattern: "/.*vpn_skyone.*/"            # Regex da métrica de VPN no Zabbix
+      pattern: "/.*vpn_skyone.*/"
       type: "number"
+      valueName: "last"
       shapes:
         - cellId: "08YMVVofLo5uhtwW3oWJ-4"   # SKYONE X GYN PORTAL
           colorMode: "stroke"
@@ -107,10 +109,10 @@ flowcharting:
           colorMode: "stroke"
       thresholds:
         - value: 0
-          color: "rgba(245, 54, 54, 0.9)"    # Vermelho (Túnel VPN Down)
+          color: "rgba(245, 54, 54, 0.9)"
           level: 2
         - value: 1
-          color: "rgba(50, 172, 45, 0.9)"    # Verde (Túnel VPN Up)
+          color: "rgba(50, 172, 45, 0.9)"
           level: 0
 
     # ============================================================
@@ -119,6 +121,7 @@ flowcharting:
     - name: "Links VPN - Matriz VP"
       pattern: "/.*vpn_vp.*/"
       type: "number"
+      valueName: "last"
       shapes:
         - cellId: "08YMVVofLo5uhtwW3oWJ-35"  # VP X AGUAS LINDAS II
           colorMode: "stroke"
@@ -168,6 +171,7 @@ flowcharting:
     - name: "Links VPN - Matriz CMP"
       pattern: "/.*vpn_cmp.*/"
       type: "number"
+      valueName: "last"
       shapes:
         - cellId: "08YMVVofLo5uhtwW3oWJ-61"  # CMP X AGUAS LINDAS I
           colorMode: "stroke"
@@ -199,8 +203,9 @@ flowcharting:
     # REGRA 5: CONEXÕES / TÚNEIS VPN MATRIZ SAMAMBAIA NORTE
     # ============================================================
     - name: "Links VPN - Matriz SAMAMBAIA NORTE"
-      pattern: "/.*vpn_sn.*/"               # Ajuste esta regex se no Zabbix estiver diferente (ex: vpn_samambaia_norte)
+      pattern: "/.*vpn_sn.*/"
       type: "number"
+      valueName: "last"
       shapes:
         - cellId: "COLE_O_ID_SN_AGUAS_LINDAS_I"   # SN X AGUAS LINDAS I
           colorMode: "stroke"
