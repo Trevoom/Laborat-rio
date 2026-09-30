@@ -4,7 +4,7 @@ flowcharting:
     # REGRA 1: STATUS DOS FIREWALLS (DISPOSITIVOS / ÍCONES)
     # ============================================================
     - name: "Status dos Firewalls (Nós)"
-      pattern: "/.*(ICMP ping|status_firewall).*/" # Alias/Regex da métrica no Zabbix
+      pattern: "/.*/" # Alias/Regex da métrica no Zabbix
       type: "number"
       metricType: "serie"
       shapes:
