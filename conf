@@ -10,49 +10,49 @@ flowcharting:
       shapes:
         # MATRIZES
         - cellId: "w4PNDmOhjg6-sdR7XbyK-2"   # SKYONE (10.122.67.144)
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-3"   # VP
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-4"   # CMP
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-5"   # SAMAMBAIA NORTE (10.10.0.1) [MATRIZ]
-          colorMode: "fill"
+          colorMode: "stroke"
 
         # FILIAIS
         - cellId: "w4PNDmOhjg6-sdR7XbyK-1"   # AGUAS LINDAS II
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-6"   # CEILANDIA
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-7"   # EPTG
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-8"   # GARAVELO
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-9"   # AGUAS LINDAS I
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-10"  # GYN CENTRO
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-11"  # PAPILON
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-12"  # RECANTO
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-13"  # RESIDENCIA
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-14"  # SAMAMBAIA SUL
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-15"  # SANTA MARIA
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-16"  # SOBRADINHO
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-17"  # MONTEMAR
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-18"  # OFICINA
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-19"  # GYN T7
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-20"  # LUZIANIA
-          colorMode: "fill"
+          colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-21"  # GYN PORTAL
-          colorMode: "fill"
+          colorMode: "stroke"
 
       thresholds:
         - value: 0
