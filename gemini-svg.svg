@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1200px" height="800px" viewBox="0 0 1200 800">
+  <style>
+    .node-text { fill: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; }
+    .link-line { fill: none; stroke-width: 3px; stroke-dasharray: 5,5; }
+    .firewall-box { stroke-width: 3px; fill: #1e1e1e; }
+  </style>
+
+  <g id="viewport">
+    <!-- ============================================================ -->
+    <!-- TÚNEIS / LINKS VPN (Arestas/Linhas)                          -->
+    <!-- ============================================================ -->
+    <g id="vpn-links">
+      <!-- SKYONE LINKS -->
+      <path id="08YMVVofLo5uhtwW3oWJ-4" class="link-line" stroke="#32AC2D" d="M 200,130 L 150,300" />
+      <path id="08YMVVofLo5uhtwW3oWJ-7" class="link-line" stroke="#32AC2D" d="M 200,130 L 300,300" />
+      <path id="08YMVVofLo5uhtwW3oWJ-8" class="link-line" stroke="#32AC2D" d="M 200,130 L 450,300" />
+      <path id="08YMVVofLo5uhtwW3oWJ-9" class="link-line" stroke="#32AC2D" d="M 200,130 L 600,300" />
+      <path id="08YMVVofLo5uhtwW3oWJ-10" class="link-line" stroke="#32AC2D" d="M 200,130 L 750,300" />
+      
+      <!-- VP LINKS -->
+      <path id="08YMVVofLo5uhtwW3oWJ-35" class="link-line" stroke="#32AC2D" d="M 450,130 L 300,300" />
+      <path id="08YMVVofLo5uhtwW3oWJ-36" class="link-line" stroke="#32AC2D" d="M 450,130 L 450,300" />
+      <path id="08YMVVofLo5uhtwW3oWJ-37" class="link-line" stroke="#32AC2D" d="M 450,130 L 600,300" />
+
+      <!-- CMP LINKS -->
+      <path id="08YMVVofLo5uhtwW3oWJ-61" class="link-line" stroke="#32AC2D" d="M 700,130 L 150,300" />
+      <path id="08YMVVofLo5uhtwW3oWJ-66" class="link-line" stroke="#32AC2D" d="M 700,130 L 300,300" />
+    </g>
+
+    <!-- ============================================================ -->
+    <!-- FIREWALLS MATRIZES (Nós)                                     -->
+    <!-- ============================================================ -->
+    <g id="matrizes">
+      <!-- SKYONE (10.122.67.144) -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-2" class="firewall-box" x="130" y="70" width="140" height="60" rx="6" stroke="#32AC2D" />
+        <text x="200" y="105" class="node-text">SKYONE</text>
+      </g>
+
+      <!-- VP -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-3" class="firewall-box" x="380" y="70" width="140" height="60" rx="6" stroke="#32AC2D" />
+        <text x="450" y="105" class="node-text">VP</text>
+      </g>
+
+      <!-- CMP -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-4" class="firewall-box" x="630" y="70" width="140" height="60" rx="6" stroke="#32AC2D" />
+        <text x="700" y="105" class="node-text">CMP</text>
+      </g>
+
+      <!-- SAMAMBAIA NORTE -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-5" class="firewall-box" x="880" y="70" width="140" height="60" rx="6" stroke="#32AC2D" />
+        <text x="950" y="105" class="node-text">SAMAMBAIA N.</text>
+      </g>
+    </g>
+
+    <!-- ============================================================ -->
+    <!-- FIREWALLS FILIAIS (Nós)                                      -->
+    <!-- ============================================================ -->
+    <g id="filiais">
+      <!-- AGUAS LINDAS I -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-9" class="firewall-box" x="80" y="300" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="145" y="330" class="node-text">AGUAS LINDAS I</text>
+      </g>
+
+      <!-- AGUAS LINDAS II -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-1" class="firewall-box" x="235" y="300" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="300" y="330" class="node-text">AGUAS LINDAS II</text>
+      </g>
+
+      <!-- CEILANDIA -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-6" class="firewall-box" x="390" y="300" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="455" y="330" class="node-text">CEILANDIA</text>
+      </g>
+
+      <!-- EPTG -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-7" class="firewall-box" x="545" y="300" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="610" y="330" class="node-text">EPTG</text>
+      </g>
+
+      <!-- GARAVELO -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-8" class="firewall-box" x="700" y="300" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="765" y="330" class="node-text">GARAVELO</text>
+      </g>
+
+      <!-- GYN CENTRO -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-10" class="firewall-box" x="855" y="300" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="920" y="330" class="node-text">GYN CENTRO</text>
+      </g>
+
+      <!-- GYN PORTAL -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-21" class="firewall-box" x="80" y="380" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="145" y="410" class="node-text">GYN PORTAL</text>
+      </g>
+
+      <!-- GYN T7 -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-19" class="firewall-box" x="235" y="380" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="300" y="410" class="node-text">GYN T7</text>
+      </g>
+
+      <!-- LUZIANIA -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-20" class="firewall-box" x="390" y="380" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="455" y="410" class="node-text">LUZIANIA</text>
+      </g>
+
+      <!-- MONTEMAR -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-17" class="firewall-box" x="545" y="380" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="610" y="410" class="node-text">MONTEMAR</text>
+      </g>
+
+      <!-- OFICINA -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-18" class="firewall-box" x="700" y="380" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="765" y="410" class="node-text">OFICINA</text>
+      </g>
+
+      <!-- PAPILON -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-11" class="firewall-box" x="855" y="380" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="920" y="410" class="node-text">PAPILON</text>
+      </g>
+
+      <!-- RECANTO -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-12" class="firewall-box" x="80" y="460" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="145" y="490" class="node-text">RECANTO</text>
+      </g>
+
+      <!-- RESIDENCIA -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-13" class="firewall-box" x="235" y="460" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="300" y="490" class="node-text">RESIDENCIA</text>
+      </g>
+
+      <!-- SAMAMBAIA SUL -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-14" class="firewall-box" x="390" y="460" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="455" y="490" class="node-text">SAMAMBAIA SUL</text>
+      </g>
+
+      <!-- SANTA MARIA -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-15" class="firewall-box" x="545" y="460" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="610" y="490" class="node-text">SANTA MARIA</text>
+      </g>
+
+      <!-- SOBRADINHO -->
+      <g>
+        <rect id="w4PNDmOhjg6-sdR7XbyK-16" class="firewall-box" x="700" y="460" width="130" height="50" rx="4" stroke="#32AC2D" />
+        <text x="765" y="490" class="node-text">SOBRADINHO</text>
+      </g>
+    </g>
+  </g>
+</svg>
