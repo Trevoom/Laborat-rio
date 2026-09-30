@@ -1,25 +1,25 @@
 flowcharting:
   rules:
     # ============================================================
-    # REGRA 1: STATUS DOS FIREWALLS (MATRIZES E FILIAIS)
+    # REGRA 1: STATUS DOS DISPOSITIVOS / FIREWALLS (NÓS)
     # ============================================================
-    - name: "Status dos Firewalls"
-      pattern: "/.*/"                        # Captura qualquer alias enviado via setAlias() no Grafana
+    - name: "Status dos Firewalls (Matrizes e Filiais)"
+      pattern: "/.*/"                        # Captura o alias enviado pelo setAlias() no Grafana
       type: "number"
       metricType: "serie"
-      valueName: "last"                      # Avalia o último valor (0 = Down, 1 = Up)
+      valueName: "last"                      # Avalia o último ponto recebido (0 = Offline, 1 = Online)
       shapes:
-        # MATRIZES
-        - cellId: "08YMVVofLo5uhtwW3oWJ-4"   # SKYONE (10.122.67.144)
+        # MATRIZES (Blocos do Topo)
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-2"   # SKYONE (10.122.67.144)
           colorMode: "stroke"
-        - cellId: "08YMVVofLo5uhtwW3oWJ-4"   # VP
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-3"   # VP
           colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-4"   # CMP
           colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-5"   # SAMAMBAIA NORTE
           colorMode: "stroke"
 
-        # FILIAIS
+        # FILIAIS (Blocos da Base)
         - cellId: "w4PNDmOhjg6-sdR7XbyK-9"   # AGUAS LINDAS I
           colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-1"   # AGUAS LINDAS II
@@ -57,20 +57,21 @@ flowcharting:
 
       thresholds:
         - value: 0
-          color: "rgba(245, 54, 54, 0.9)"    # Vermelho quando offline
+          color: "rgba(245, 54, 54, 0.9)"    # Vermelho (OFFLINE)
           level: 2
         - value: 1
-          color: "rgba(50, 172, 45, 0.9)"    # Verde quando online
+          color: "rgba(50, 172, 45, 0.9)"    # Verde (ONLINE)
           level: 0
       options:
-        blink: true                         # Pisca a borda do nó quando cair
+        blink: true                         # Pisca a borda em vermelho em caso de queda
 
     # ============================================================
-    # REGRA 2: LINKS VPN - MATRIZ SKYONE
+    # REGRA 2: CONEXÕES / TÚNEIS VPN - MATRIZ SKYONE (LINHAS TECLADAS)
     # ============================================================
-    - name: "Links VPN - Matriz SKYONE"
+    - name: "Links VPN - SKYONE"
       pattern: "/.*vpn_skyone.*/"
       type: "number"
+      metricType: "serie"
       valueName: "last"
       shapes:
         - cellId: "08YMVVofLo5uhtwW3oWJ-4"   # SKYONE X GYN PORTAL
@@ -92,11 +93,12 @@ flowcharting:
           level: 0
 
     # ============================================================
-    # REGRA 3: LINKS VPN - MATRIZ VP
+    # REGRA 3: CONEXÕES / TÚNEIS VPN - MATRIZ VP
     # ============================================================
-    - name: "Links VPN - Matriz VP"
+    - name: "Links VPN - VP"
       pattern: "/.*vpn_vp.*/"
       type: "number"
+      metricType: "serie"
       valueName: "last"
       shapes:
         - cellId: "08YMVVofLo5uhtwW3oWJ-35"  # VP X AGUAS LINDAS II
@@ -114,11 +116,12 @@ flowcharting:
           level: 0
 
     # ============================================================
-    # REGRA 4: LINKS VPN - MATRIZ CMP
+    # REGRA 4: CONEXÕES / TÚNEIS VPN - MATRIZ CMP
     # ============================================================
-    - name: "Links VPN - Matriz CMP"
+    - name: "Links VPN - CMP"
       pattern: "/.*vpn_cmp.*/"
       type: "number"
+      metricType: "serie"
       valueName: "last"
       shapes:
         - cellId: "08YMVVofLo5uhtwW3oWJ-61"  # CMP X AGUAS LINDAS I
