@@ -12,7 +12,7 @@ flowcharting:
         # MATRIZES
         - cellId: "08YMVVofLo5uhtwW3oWJ-4"   # SKYONE (10.122.67.144)
           colorMode: "stroke"
-        - cellId: "w4PNDmOhjg6-sdR7XbyK-3"   # VP
+        - cellId: "08YMVVofLo5uhtwW3oWJ-4"   # VP
           colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-4"   # CMP
           colorMode: "stroke"
