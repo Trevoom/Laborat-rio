@@ -1,0 +1,134 @@
+flowcharting:
+  rules:
+    # ============================================================
+    # REGRA 1: STATUS DOS FIREWALLS (MATRIZES E FILIAIS)
+    # ============================================================
+    - name: "Status dos Firewalls"
+      pattern: "/.*/"                        # Captura qualquer alias enviado via setAlias() no Grafana
+      type: "number"
+      metricType: "serie"
+      valueName: "last"                      # Avalia o último valor (0 = Down, 1 = Up)
+      shapes:
+        # MATRIZES
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-2"   # SKYONE (10.122.67.144)
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-3"   # VP
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-4"   # CMP
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-5"   # SAMAMBAIA NORTE
+          colorMode: "stroke"
+
+        # FILIAIS
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-9"   # AGUAS LINDAS I
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-1"   # AGUAS LINDAS II
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-6"   # CEILANDIA
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-7"   # EPTG
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-8"   # GARAVELO
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-10"  # GYN CENTRO
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-21"  # GYN PORTAL
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-19"  # GYN T7
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-20"  # LUZIANIA
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-17"  # MONTEMAR
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-18"  # OFICINA
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-11"  # PAPILON
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-12"  # RECANTO
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-13"  # RESIDENCIA
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-14"  # SAMAMBAIA SUL
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-15"  # SANTA MARIA
+          colorMode: "stroke"
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-16"  # SOBRADINHO
+          colorMode: "stroke"
+
+      thresholds:
+        - value: 0
+          color: "rgba(245, 54, 54, 0.9)"    # Vermelho quando offline
+          level: 2
+        - value: 1
+          color: "rgba(50, 172, 45, 0.9)"    # Verde quando online
+          level: 0
+      options:
+        blink: true                         # Pisca a borda do nó quando cair
+
+    # ============================================================
+    # REGRA 2: LINKS VPN - MATRIZ SKYONE
+    # ============================================================
+    - name: "Links VPN - Matriz SKYONE"
+      pattern: "/.*vpn_skyone.*/"
+      type: "number"
+      valueName: "last"
+      shapes:
+        - cellId: "08YMVVofLo5uhtwW3oWJ-4"   # SKYONE X GYN PORTAL
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-7"   # SKYONE X AGUAS LINDAS II
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-8"   # SKYONE X CEILANDIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-9"   # SKYONE X EPTG
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-10"  # SKYONE X GARAVELO
+          colorMode: "stroke"
+      thresholds:
+        - value: 0
+          color: "rgba(245, 54, 54, 0.9)"
+          level: 2
+        - value: 1
+          color: "rgba(50, 172, 45, 0.9)"
+          level: 0
+
+    # ============================================================
+    # REGRA 3: LINKS VPN - MATRIZ VP
+    # ============================================================
+    - name: "Links VPN - Matriz VP"
+      pattern: "/.*vpn_vp.*/"
+      type: "number"
+      valueName: "last"
+      shapes:
+        - cellId: "08YMVVofLo5uhtwW3oWJ-35"  # VP X AGUAS LINDAS II
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-36"  # VP X CEILANDIA
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-37"  # VP X EPTG
+          colorMode: "stroke"
+      thresholds:
+        - value: 0
+          color: "rgba(245, 54, 54, 0.9)"
+          level: 2
+        - value: 1
+          color: "rgba(50, 172, 45, 0.9)"
+          level: 0
+
+    # ============================================================
+    # REGRA 4: LINKS VPN - MATRIZ CMP
+    # ============================================================
+    - name: "Links VPN - Matriz CMP"
+      pattern: "/.*vpn_cmp.*/"
+      type: "number"
+      valueName: "last"
+      shapes:
+        - cellId: "08YMVVofLo5uhtwW3oWJ-61"  # CMP X AGUAS LINDAS I
+          colorMode: "stroke"
+        - cellId: "08YMVVofLo5uhtwW3oWJ-66"  # CMP X AGUAS LINDAS II
+          colorMode: "stroke"
+      thresholds:
+        - value: 0
+          color: "rgba(245, 54, 54, 0.9)"
+          level: 2
+        - value: 1
+          color: "rgba(50, 172, 45, 0.9)"
+          level: 0
