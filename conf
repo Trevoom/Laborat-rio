@@ -10,7 +10,7 @@ flowcharting:
       valueName: "last"                      # Avalia o último valor recebido da série
       shapes:
         # MATRIZES
-        - cellId: "nzdVLG6IPYVujrJucx6a-2"   # SKYONE (10.122.67.144)
+        - cellId: "w4PNDmOhjg6-sdR7XbyK-2"   # SKYONE (10.122.67.144)
           colorMode: "stroke"
         - cellId: "w4PNDmOhjg6-sdR7XbyK-3"   # VP
           colorMode: "stroke"
